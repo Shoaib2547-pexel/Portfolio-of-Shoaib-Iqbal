@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { motion } from 'motion/react'
 import { Home, HomeScroll } from './Home'
 import Modaal from './Modaal'
-import Skills from './Skills';
+import {Progressbar, Skills} from './Skills';
 import profilepic from '../Images/Shoaib.png'
 import Contact from './Contact';
 import Projects from './Projects';
@@ -32,7 +32,7 @@ export default function ScrollSections() {
 
 
                     <div className='md:relative flex items-center justify-center mr-6 '>
-                        <motion.img initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 2 }} src={profilepic} alt="" className='md:absolute md:top-0 md:right-12 w-[300px] h-[300px] ' />
+                        <motion.img initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 2 }} src={profilepic} alt="" className='md:absolute md:top-0 md:right-12 w-[300px] h-[300px] ' />
                     </div>
 
 
@@ -44,19 +44,25 @@ export default function ScrollSections() {
                 </div>
 
             </section>
+            <section id='about' className='bg-black p-3 '>
+
+            </section>
 
             <section id='skills' className=' bg-black px-6 py-[40px]'>
-                <h1 className='text-[25px] font-sans font-bold text-yellow-400 mb-10 underline decoration-yellow-400'>My <span className='text-white'>SKILLS</span></h1>
-                <div className='mx-6 grid grid-cols-1 md:grid-cols-2 gap-5 '>
-                    <div className='' >
+                <motion.h1 initial={{opacity:0, y:-20}} whileInView={{opacity:1, y:0}} viewport={{amount:0.4}} transition={{duration:1}} className='text-[25px] font-sans font-bold text-yellow-400 mb-10 underline decoration-yellow-400'>My <span className='text-white'>SKILLS</span></motion.h1>
+                <div className='md:mx-6  grid grid-cols-1 md:grid-cols-2 gap-5 '>
+                    <div>
                         <Skills />
                     </div>
-                    <div className='pl-[100px]'>
-                        <motion.img src={skillPic} alt="" width={300} height={300}
+
+                    <div className='p-5'>
+                        <Progressbar/>
+
+                        {/* <motion.img src={skillPic} alt="" width={300} height={300}
                             initial={{ rotateX: -90, opacity: 0 }} // start from top (rotated)
                             whileInView={{ rotateX: 0, opacity: 1 }} // rotate to normal
                             viewport={{ amount: 0.3 }} // when 30% visible
-                            transition={{ duration: 0.8, ease: "easeOut" }} />
+                            transition={{ duration: 0.8, ease: "easeOut" }} /> */}
 
                     </div>
                 </div>

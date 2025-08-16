@@ -31,7 +31,7 @@ export default function Contact() {
     }
     return (
         <>
-            <FontAwesomeIcon />
+            
             <div className='flex items-center justify-center py-4'>
                 <ToastContainer />
                 <form onSubmit={notify} className='w-[400px] '>
@@ -46,7 +46,7 @@ export default function Contact() {
             {/* footer  */}
 
 
-            <footer className='grid grid-cols-1 gap-4 md:grid-cols-3 border-b-2 border-yellow-400 md:bg-gray-600 py-3 mt-3'>
+            <footer className='grid grid-cols-1 gap-4 md:grid-cols-3 border-b-2 border-yellow-400 md:bg-[#374151] py-3 mt-3'>
                 <div className='p-2 flex flex-col items-center justify-center'>
                     <FontAwesomeIcon icon={faLocationDot} className='text-yellow-400' />
                     <p className='font-bold text-white text-[20px]'>Address</p>
@@ -68,24 +68,7 @@ export default function Contact() {
                 </div>
 
             </footer>
-            <div className='flex items-center justify-around gap-6 py-1 md:justify-center md:bg-gray-600'>
-                <a href="https://facebook.com/yourusername" target="_blank" >
-                    <FontAwesomeIcon icon={faFacebook} className='text-white' />
-                </a>
-
-                <a href="https://github.com/yourusername" target="_blank" >
-                    <FontAwesomeIcon icon={faGithub} className='text-white' />
-                </a>
-
-                <a href="https://linkedin.com/in/yourusername" target="_blank">
-                    <FontAwesomeIcon icon={faLinkedin} className='text-white' />
-                </a>
-
-                
-                <a href="tel:+923253248696" className='block md:hidden' target="_blank">
-                    <FontAwesomeIcon icon={faPhone} className='text-white' />
-                </a>
-            </div>
+            
 
         </>
     )
