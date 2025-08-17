@@ -48,10 +48,10 @@ export function Skills() {
 export function Progressbar() {
 
     const skill = [
-        { name: "React", value: 66 },
-        { name: "CSS", value: 70 },
-        { name: "JavaScript", value: 80 },
-        { name: "Node.js", value: 90 },
+        { name: "Communication", value: 66 },
+        { name: "Leadership", value: 70 },
+        { name: "Project Management", value: 80 },
+        { name: "Team Work", value: 90 },
     ];
     return (
         <div className='grid grid-cols-2  gap-10 '>

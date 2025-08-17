@@ -22,7 +22,7 @@ export default function ScrollSections() {
 
     return (
         <>
-            <section id='home' className='bg-black '>
+            <section id='home' className='bg-black py-6'>
                 <Modaal close={open} btnclose={close} />
 
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
@@ -68,12 +68,12 @@ export default function ScrollSections() {
             </section>
 
             <section id='project' className='bg-black'>
-                <motion.h1 initial={{opacity:0, y:-20}} whileInView={{opacity:1, y:0}} viewport={{amount:0.4}} transition={{duration:1}} className='text-yellow-400 underline decoration-yellow-400 text-[25px] font-bold pt-5'>My <span className='text-white'>Works</span></motion.h1>
-                <p className='text-white pb-5 mb-20'>Some of my projects</p>
+                <motion.h1 initial={{opacity:0, y:-20}} whileInView={{opacity:1, y:0}} viewport={{amount:0.4}} transition={{duration:1}} className='text-yellow-400 underline decoration-yellow-400 text-[25px] font-bold '>My <span className='text-white'>Works</span></motion.h1>
+                <p className='text-white pb-5 mb-10'>Some of my projects</p>
                 <Projects />
             </section>
 
-            <section id='contact' className='bg-black pt-3'>
+            <section id='contact' className='bg-black pt-6'>
                 <motion.h1 initial={{opacity:0, y:-20}} whileInView={{opacity:1, y:0}} viewport={{amount:0.4}} transition={{duration:1}} className='text-white text-[25px] font-sans font-bold underline decoration-yellow-400 underline-offset-3 pt-10 mb-5'><span className='text-yellow-400 font-bold text-[25px] underline'>Contact</span> me</motion.h1>
                 <Contact />
             </section>
