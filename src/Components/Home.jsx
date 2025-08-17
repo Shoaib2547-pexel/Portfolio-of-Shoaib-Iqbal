@@ -3,6 +3,7 @@ import { motion } from 'motion/react'
 import { faFacebook, faGithub, faLinkedin, } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-scroll'
 
 export function Home({ open }) {
 
@@ -17,7 +18,7 @@ export function Home({ open }) {
 
 
             {/* Icons  */}
-            <motion.div initial={{ opacity: 0.5, x: -45 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }} className='flex items-center justify-start gap-6 py-1 ml-[50px]  '>
+            <motion.div initial={{ opacity: 0.5, x: -45 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }} className='flex items-center justify-start md:gap-6 gap-4 py-1 ml-[45px]  '>
                 <motion.a className='h-[25px] w-[30px]  rounded-md flex items-center justify-center'
 
                     initial={{ backgroundColor: "transparent" }}
@@ -49,7 +50,7 @@ export function Home({ open }) {
                 </motion.a>
 
 
-                <motion.a className='h-[25px] w-[30px]  rounded-md md:flex items-center justify-center'
+                <motion.a className='h-[25px] w-[30px] block md:hidden rounded-md md:flex items-center justify-center'
 
                     initial={{ backgroundColor: "transparent" }}
                     whileHover={{ backgroundColor: "gray" }}
@@ -60,7 +61,7 @@ export function Home({ open }) {
             </motion.div>
 
             <div className='flex justify-start items-center gap-3 ml-[50px] mt-[60px]'>
-                <motion.button initial={{ opacity: 0.7, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.9 }} whileHover={{ opacity: 0.7 }} className='bg-red-400 px-[12px] py-[8px] text-white '>Read More</motion.button>
+                <motion.button initial={{ opacity: 0.7, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.9 }} whileHover={{ opacity: 0.7 }} className='bg-red-400 px-[12px] py-[8px] text-white '><Link to='about' smooth={true} duration={500}>Read More</Link></motion.button>
                 <motion.button initial={{ opacity: 0.7, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.9 }} whileHover={{
                     backgroundColor: "#f87171",
                     color: "#000",

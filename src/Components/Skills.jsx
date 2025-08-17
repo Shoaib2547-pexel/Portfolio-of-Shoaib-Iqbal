@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
 import react from '../Images/react.png'
 import github from '../Images/github.png'
@@ -19,22 +19,22 @@ export function Skills() {
 
     return (
         <>
-            {skills.map((val, index) => {
+            {skills.map((Val, index) => {
                 return (
                     <div className='flex items-center justify-center gap-6 mb-4 md:w-[80%] w-[100%]  '>
                         <div>
-                            <img src={val.images} alt="" />
+                            <img src={Val.images} alt="" />
                         </div>
 
                         <div className='w-full'>
                             <div className='flex justify-between '>
-                                <h1 className='text-white'>{val.name}</h1>
-                                <p className='text-white'>{val.level}%</p>
+                                <h1 className='text-white'>{Val.name}</h1>
+                                <p className='text-white'>{Val.level}%</p>
                             </div>
 
 
                             <div key={index} className='w-full mb-4 h-2 bg-white rounded-br-lg flex items-center'>
-                                <motion.div initial={{ width: "0%", opacity: 0.5 }} whileInView={{ width: `${val.level}%`, opacity: 1 }} transition={{ duration: 1, ease: 'easeOut' }} className={` ${val.color} rounded-br-lg h-2 text-${val.color}`} style={{ width: `${val.level}%` }}>.</motion.div>
+                                <motion.div initial={{ width: "0%", opacity: 0.5 }} whileInView={{ width: `${Val.level}%`, opacity: 1 }} transition={{ duration: 1, ease: 'easeOut' }} className={` ${Val.color} rounded-br-lg h-2 text-${Val.color}`} style={{ width: `${Val.level}%` }}>.</motion.div>
                             </div>
                         </div>
 
@@ -56,28 +56,50 @@ export function Progressbar() {
     return (
         <div className='grid grid-cols-2  gap-10 '>
             {skill.map((val, index) => (
-                <div className='flex flex-col items-center'>
-                    <div className=' w-24 h-24'>
-                        <CircularProgressbar value={val.value} text={`${val.value}%`} styles={buildStyles({
-                            pathColor: "#facc15", // yellow-400
-                            textColor: "#fff",
-                            trailColor: "#374151", // gray-700
-                            strokeLinecap: "butt",
-                            pathTransitionDuration: 2,
-                            transform: 'rotate(0.25turn)',
-                            transformOrigin: 'center center',
-                        })}
-                            strokeWidth={8} />
-                    </div>
-                    <span className='text-[#fff]'>
-                        {val.name}
-                    </span>
-                </div>
 
-
+                <AnimatePB Name={val.name} Val={val.value} />
             ))}
 
         </div>
     )
 
+}
+
+function AnimatePB({ Val, Name }) {
+
+    let [progess, setcount] = useState(0);
+
+    useEffect(() => {
+        let start = 0
+
+        let step = () => {
+            start += 1
+            if (start <= Val) {
+                setcount(start)
+                requestAnimationFrame(step)
+            }
+        }
+
+        requestAnimationFrame(step)
+    }, [Val])
+
+    return (
+        <div className='flex flex-col items-center'>
+            <div className=' w-24 h-24'>
+                <CircularProgressbar value={progess} text={`${Val}%`} styles={buildStyles({
+                    pathColor: "#facc15", // yellow-400
+                    textColor: "#fff",
+                    trailColor: "#374151", // gray-700
+                    strokeLinecap: "butt",
+                    pathTransitionDuration: 2,
+                    transform: 'rotate(0.25turn)',
+                    transformOrigin: 'center center',
+                })}
+                    strokeWidth={8} />
+            </div>
+            <span className='text-[#fff]'>
+                {Name}
+            </span>
+        </div>
+    )
 }

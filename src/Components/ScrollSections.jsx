@@ -6,7 +6,8 @@ import {Progressbar, Skills} from './Skills';
 import profilepic from '../Images/Shoaib.png'
 import Contact from './Contact';
 import Projects from './Projects';
-import skillPic from '../Images/skillss.png'
+import About from './About';
+
 
 
 
@@ -44,12 +45,14 @@ export default function ScrollSections() {
                 </div>
 
             </section>
-            <section id='about' className='bg-black p-3 '>
-
+            <section id='about' className='bg-black p-6 '>
+                <motion.h1 initial={{opacity:0, y:-20}} whileInView={{opacity:1, y:0}} viewport={{amount:0.4}} transition={{duration:1}} className='text-[25px] font-sans font-bold text-yellow-400 mb-10 underline decoration-yellow-400'>
+                About <span className='text-white'>Me</span> </motion.h1>
+                <About/>
             </section>
 
             <section id='skills' className=' bg-black px-6 py-[40px]'>
-                <motion.h1 initial={{opacity:0, y:-20}} whileInView={{opacity:1, y:0}} viewport={{amount:0.4}} transition={{duration:1}} className='text-[25px] font-sans font-bold text-yellow-400 mb-10 underline decoration-yellow-400'>My <span className='text-white'>SKILLS</span></motion.h1>
+                <motion.h1 initial={{opacity:0, y:-20}} whileInView={{opacity:1, y:0}} viewport={{amount:0.4}} transition={{duration:1}} className='text-[25px] font-sans font-bold text-yellow-400 mb-2 underline decoration-yellow-400'>My <span className='text-white'>SKILLS</span></motion.h1>
                 <div className='md:mx-6  grid grid-cols-1 md:grid-cols-2 gap-5 '>
                     <div>
                         <Skills />
@@ -58,11 +61,7 @@ export default function ScrollSections() {
                     <div className='p-5'>
                         <Progressbar/>
 
-                        {/* <motion.img src={skillPic} alt="" width={300} height={300}
-                            initial={{ rotateX: -90, opacity: 0 }} // start from top (rotated)
-                            whileInView={{ rotateX: 0, opacity: 1 }} // rotate to normal
-                            viewport={{ amount: 0.3 }} // when 30% visible
-                            transition={{ duration: 0.8, ease: "easeOut" }} /> */}
+                        
 
                     </div>
                 </div>
