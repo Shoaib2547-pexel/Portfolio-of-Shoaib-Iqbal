@@ -44,7 +44,7 @@ export default function Contact() {
 
             <div className='flex items-center justify-center py-4'>
                 <ToastContainer />
-                <form onSubmit={notify} className='w-[400px] '>
+                <form onSubmit={notify} className='md:w-[500px] w-[400px] '>
                     <input type='text' placeholder='Username' name='Uname' value={formData.Uname} className='w-[95%] p-1 mb-2 ' onChange={setdata} />
                     <input type='text' placeholder='Email' name='Uemail' value={formData.Uemail} className='w-[95%] p-1 mb-2 ' onChange={setdata} />
                     <input type='text' placeholder='Phone' name='Uphone' value={formData.Uphone} className='w-[95%] p-1 mb-2 ' onChange={setdata} />
