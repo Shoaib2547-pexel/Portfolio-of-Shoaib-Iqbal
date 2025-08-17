@@ -24,14 +24,14 @@ export default function Contact() {
 
     }
 
-    let notify=(evt)=>{
+    let notify = (evt) => {
         evt.preventDefault();
-        toast.success("Submit Succesfully",{position:'top-left',autoClose:1500})
-        
+        toast.success("Submit Succesfully", { position: 'top-left', autoClose: 1500 })
+
     }
     return (
         <>
-            
+
             <div className='flex items-center justify-center py-4'>
                 <ToastContainer />
                 <form onSubmit={notify} className='w-[400px] '>
@@ -67,8 +67,12 @@ export default function Contact() {
 
                 </div>
 
+
             </footer>
-            
+            <div className='md:grid-cols-3 md:bg-[#374151]'>
+                <p className='text-white p-1'>© 2025 Shoaib Iqbal. All rights reserved.</p>
+            </div>
+
 
         </>
     )

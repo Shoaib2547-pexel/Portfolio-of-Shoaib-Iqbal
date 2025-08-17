@@ -6,9 +6,9 @@ import { Link } from 'react-scroll'
 export default function About() {
   return (
 
-    <div className='grid grid-cols-1 md:grid-cols-2  mt-6 m-3'>
+    <div className='grid grid-cols-1 md:grid-cols-2   m-3'>
       <div className='order-2 md:order-1 flex items-center justify-center'>
-        <motion.img initial={{opacity:0, x:-40}} animate={{opacity:1,x:0}} transition={{duration:1 ,ease:'easeIn'}} src={profile} className='border-b-2 border-yellow-400 ' />
+        <motion.img initial={{opacity:0, x:-40}} whileInView={{opacity:1,x:0}} viewport={{once:true}} transition={{duration:1 ,ease:'easeIn'}} src={profile} className='border-b-2 border-yellow-400 ' />
       </div>
       <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 1.5 }} className=' md:pt-[100px] pb-[20px] order-1 md:order-2  '>
         <p className='text-white text-left font-thin'>Let Me Introduce My Self</p>
