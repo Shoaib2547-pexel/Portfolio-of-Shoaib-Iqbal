@@ -26,7 +26,17 @@ export default function Contact() {
 
     let notify = (evt) => {
         evt.preventDefault();
-        toast.success("Submit Succesfully", { position: 'top-left', autoClose: 1500 })
+        if(!formData.Uname || !formData.Uemail || !formData.Umsg || !formData.Uphone){
+            toast.error("Please fill all inputs",{position:'top-left',autoClose:1500})
+        }else{
+            toast.success("Submit Succesfully", { position: 'top-left', autoClose: 1500 })
+        }
+         setformData({
+                Uname: '',
+                Uemail: '',
+                Umsg: '',
+                Uphone: ''
+            });
 
     }
     return (
