@@ -11,32 +11,38 @@ export default function ProjectsN() {
         {
             img: loginPic,
             heading: 'Login Page',
-            writing: 'Animated Sign Up and Login Page'
+            writing: 'Animated Sign Up and Login Page',
+            reff: 'https://login-signup-form-theta.vercel.app/'
         },
         {
             img: proImg,
             heading: 'Portfolio',
-            writing: 'Created to display creativity of Shoaib Iqbal'
+            writing: 'Created to display creativity of Shoaib Iqbal',
+            reff: 'https://shoaib-portfolio-phi.vercel.app/'
         },
         {
             img: proImg,
             heading: 'Portfolio',
-            writing: 'Created to display creativity of Shoaib Iqbal'
+            writing: 'Created to display creativity of Shoaib Iqbal',
+            reff: 'https://shoaib-portfolio-phi.vercel.app/'
         },
         {
             img: proImg,
             heading: 'Portfolio',
-            writing: 'Created to display creativity of Shoaib Iqbal'
+            writing: 'Created to display creativity of Shoaib Iqbal',
+            reff: 'https://shoaib-portfolio-phi.vercel.app/'
         },
         {
             img: proImg,
             heading: 'Portfolio',
-            writing: 'Created to display creativity of Shoaib Iqbal'
+            writing: 'Created to display creativity of Shoaib Iqbal',
+            reff: 'https://shoaib-portfolio-phi.vercel.app/'
         },
         {
             img: proImg,
             heading: 'Portfolio',
-            writing: 'Created to display creativity of Shoaib Iqbal'
+            writing: 'Created to display creativity of Shoaib Iqbal',
+            reff: 'https://shoaib-portfolio-phi.vercel.app/'
         },
     ]
 
@@ -51,7 +57,7 @@ export default function ProjectsN() {
                             
                                 <h1 className='text-black font-extrabold text-[20px] drop-shadow-xl'>{items.heading}</h1>
                                 <p className='text-black shadow-white font-bold drop-shadow-lg'>{items.writing}</p>
-                               <a href='https://shoaib-portfolio-phi.vercel.app/ ' target='_blank'><FontAwesomeIcon icon={faSquareArrowUpRight} className='text-black w-[40px] h-[40px]'/></a>
+                               <a href={items.reff} target='_blank'><FontAwesomeIcon icon={faSquareArrowUpRight} className='text-black w-[40px] h-[40px]'/></a>
  
                         </div>
                     }
