@@ -7,6 +7,7 @@ import profilepic from '../Images/Shoaib.png'
 import Contact from './Contact';
 import Projects from './Projects';
 import About from './About';
+import ProjectsN from './ProjectsN';
 
 
 
@@ -61,16 +62,15 @@ export default function ScrollSections() {
                     <div className='p-5'>
                         <Progressbar/>
 
-                        
-
                     </div>
                 </div>
             </section>
 
-            <section id='project' className='bg-black'>
+            <section id='project' className='bg-black flex-col items-center justify-center'>
                 <motion.h1 initial={{opacity:0, y:-20}} whileInView={{opacity:1, y:0}} viewport={{amount:0.4}} transition={{duration:1}} className='text-yellow-400 underline decoration-yellow-400 text-[25px] font-bold '>My <span className='text-white'>Works</span></motion.h1>
-                <p className='text-white pb-5 mb-10'>Some of my projects</p>
-                <Projects />
+                <p className='text-white pb-5 '>Some of my projects</p>
+                {/* <Projects /> */}
+                <ProjectsN/>
             </section>
 
             <section id='contact' className='bg-black pt-6'>
