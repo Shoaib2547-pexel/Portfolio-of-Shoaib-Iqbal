@@ -5,7 +5,6 @@ import Modaal from './Modaal'
 import {Progressbar, Skills} from './Skills';
 import profilepic from '../Images/Shoaib.png'
 import Contact from './Contact';
-import Projects from './Projects';
 import About from './About';
 import ProjectsN from './ProjectsN';
 

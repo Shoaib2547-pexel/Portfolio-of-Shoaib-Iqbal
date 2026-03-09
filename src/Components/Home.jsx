@@ -24,7 +24,7 @@ export function Home({ open }) {
                     initial={{ backgroundColor: "transparent" }}
                     whileHover={{ backgroundColor: "gray" }}
                     transition={{ duration: 0.8, ease: "easeIn" }}
-                    href="https://facebook.com/yourusername" target="_blank"  >
+                    href="https://www.facebook.com/shoaib.iqbal.962797" target="_blank"  >
 
                     <FontAwesomeIcon icon={faFacebook} className='text-white' />
 
@@ -36,7 +36,7 @@ export function Home({ open }) {
                     initial={{ backgroundColor: "transparent" }}
                     whileHover={{ backgroundColor: "gray" }}
                     transition={{ duration: 0.8, ease: "easeIn" }}
-                    href="https://github.com/yourusername" target="_blank" >
+                    href="https://github.com/Shoaib2547-pexel" target="_blank" >
                     <FontAwesomeIcon icon={faGithub} className='text-white' />
                 </motion.a>
 
@@ -45,7 +45,7 @@ export function Home({ open }) {
                     initial={{ backgroundColor: "transparent" }}
                     whileHover={{ backgroundColor: "gray" }}
                     transition={{ duration: 0.8, ease: "easeIn" }}
-                    href="https://linkedin.com/in/yourusername" target="_blank">
+                    href="www.linkedin.com/in/shoaib-iqbal-8b9423381" target="_blank">
                     <FontAwesomeIcon icon={faLinkedin} className='text-white' />
                 </motion.a>
 
