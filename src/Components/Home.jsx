@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import { motion } from 'motion/react'
 import { faFacebook, faGithub, faLinkedin, } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
