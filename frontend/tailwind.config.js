@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       colors: {
         colors: {
+        nodejs:'#339933',
         react: '#61DBFB',
         github: '#f5f5f5',
         html: '#e34c26',

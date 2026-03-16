@@ -2,6 +2,7 @@ import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import  { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
+import axios from 'axios';
 
 export default function Contact() {
     let [formData, setformData] = useState(
@@ -29,6 +30,12 @@ export default function Contact() {
             toast.error("Please fill all inputs",{position:'top-left',autoClose:1500})
         }else{
             toast.success("Submit Succesfully", { position: 'top-left', autoClose: 1500 })
+            axios.post("http://localhost:3000/api/email/sendemail",formData).then((res)=>{
+                console.log(formData);
+            }).catch((err)=>{
+                console.log(err)
+            })
+            
         }
          setformData({
                 Uname: '',

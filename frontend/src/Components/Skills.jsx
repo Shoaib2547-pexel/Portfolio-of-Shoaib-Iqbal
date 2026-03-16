@@ -10,7 +10,8 @@ import 'react-circular-progressbar/dist/styles.css';
 
 export function Skills() {
     let skills = [
-        { name: 'React', level: 70, color: 'bg-colors-react', images: react },
+         { name: 'Nodejs', level: 70, color: 'bg-colors-nodejs', images: react },
+        { name: 'React', level: 75, color: 'bg-colors-react', images: react },
         { name: 'JavaScript', level: 80, color: 'bg-colors-javascript', images: js },
         { name: 'CSS', level: 85, color: 'bg-colors-css', images: css },
         { name: 'HTML', level: 90, color: 'bg-colors-html', images: html },
@@ -23,7 +24,7 @@ export function Skills() {
                 return (
                     <div className='flex items-center justify-center gap-6 mb-4 md:w-[80%] w-[100%]  '>
                         <div>
-                            <img src={Val.images} alt="" />
+                            <img src={Val.images} alt="skills" />
                         </div>
 
                         <div className='w-full'>
