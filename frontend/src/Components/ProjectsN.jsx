@@ -1,6 +1,8 @@
 import  { useState } from 'react'
 import proImg from '../Images/proImg.jpg'
 import loginPic from '../Images/login.jpg'
+import fast from '../Images/Fast.png'
+import deli from '../Images/deli.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSquareArrowUpRight } from '@fortawesome/free-solid-svg-icons'
 
@@ -16,18 +18,18 @@ export default function ProjectsN() {
             alts: "Login page"
         },
         {
-            img: proImg,
-            heading: 'Portfolio',
-            writing: 'Created to display creativity of Shoaib Iqbal',
-            reff: 'https://shoaib-portfolio-phi.vercel.app/',
-            alts: "portfolio"
+            img: fast,
+            heading: 'Fast University',
+            writing: 'Bilt with Html and tailwind css',
+            reff: 'https://fast-university.vercel.app/',
+            alts: "Fast University"
         },
         {
-            img: proImg,
-            heading: 'Portfolio',
-            writing: 'Created to display creativity of Shoaib Iqbal',
-            reff: 'https://shoaib-portfolio-phi.vercel.app/',
-            alts: "portfolio"
+            img: deli,
+            heading: 'Delivery Frontend',
+            writing: 'Frontend of Delivery App (React)',
+            reff: 'https://food-delivery-app-pi-livid.vercel.app/Services',
+            alts: "Delivery Frontend"
         },
         {
             img: proImg,

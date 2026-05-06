@@ -54,7 +54,7 @@ export default function Contact() {
                     <input type='text' placeholder='Username' name='Uname' value={formData.Uname} className='w-[95%] p-1 mb-2 ' onChange={setdata} />
                     <input type='text' placeholder='Email' name='Uemail' value={formData.Uemail} className='w-[95%] p-1 mb-2 ' onChange={setdata} />
                     <input type='text' placeholder='Phone' name='Uphone' value={formData.Uphone} className='w-[95%] p-1 mb-2 ' onChange={setdata} />
-                    <textarea placeholder="Enter your address..." name='Umsg' value={formData.Umsg} rows="3" className='w-[95%] p-1 mb-2' onChange={setdata} />
+                    <textarea placeholder="Type Message..." name='Umsg' value={formData.Umsg} rows="3" className='w-[95%] p-1 mb-2' onChange={setdata} />
                     <button className='w-[95%] bg-yellow-400 p-2 text-white'>Submit</button>
                 </form>
             </div>
